@@ -65,4 +65,52 @@ Public Class FrmLiberaProductoSucursal
             CargaProductosSucursal()
         End If
     End Sub
+
+    Private Sub btnLibera_Click(sender As Object, e As EventArgs) Handles btnLibera.Click
+        LiberaProductos
+    End Sub
+    Private Sub LiberaProductos()
+        Dim renglon As Integer
+        renglon = 0
+        While renglon < dgvProductoSucursal.Rows.Count
+            EjecutaliberaProducto(dgvProductoSucursal.Item(0, renglon).Value) '
+            '
+            renglon = renglon + 1
+        End While
+        dgvProductoSucursal.DataSource = Nothing
+        dgvProductoSucursal.Rows.Clear()
+    End Sub
+    Private Sub EjecutaliberaProducto(Id As Integer)
+        Dim Transaccion As SqlTransaction = Nothing
+        Try
+            Cnn = New SqlConnection()
+            Cnn.ConnectionString = cstrConnectBDapp
+            Cnn.Open()
+            '
+            Transaccion = Cnn.BeginTransaction
+            cmd = Cnn.CreateCommand
+            cmd.CommandText = "spLiberaProductoSucursal"
+            '
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@FolioId", Id))
+            '
+            cmd.Transaction = Transaccion
+            '
+            cmd.ExecuteNonQuery()
+            '
+            cmd.Dispose()
+            Transaccion.Commit()
+            '
+        Catch ex As Exception
+            Transaccion.Rollback()
+            MsgBox(ex.Message)
+        Finally
+            If Not Cnn Is Nothing Then
+                If Cnn.State = ConnectionState.Open Then
+                    Cnn.Close()    'cerrar conexion
+                    Cnn = Nothing     'destruir objeto
+                End If
+            End If
+        End Try
+    End Sub
 End Class

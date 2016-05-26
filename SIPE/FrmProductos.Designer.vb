@@ -24,6 +24,8 @@ Partial Class FrmProductos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProductos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.cboUnidad = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -39,8 +41,6 @@ Partial Class FrmProductos
         Me.LblCodigo = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +70,26 @@ Partial Class FrmProductos
         Me.GroupBox1.Size = New System.Drawing.Size(960, 268)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'txtNombre
+        '
+        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtNombre.Location = New System.Drawing.Point(166, 63)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNombre.MaxLength = 250
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(420, 26)
+        Me.txtNombre.TabIndex = 12
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(27, 105)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 20)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Descripción"
         '
         'cboUnidad
         '
@@ -237,26 +257,6 @@ Partial Class FrmProductos
         Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProductos.Size = New System.Drawing.Size(950, 317)
         Me.dgvProductos.TabIndex = 0
-        '
-        'txtNombre
-        '
-        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNombre.Location = New System.Drawing.Point(166, 63)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtNombre.MaxLength = 250
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(420, 26)
-        Me.txtNombre.TabIndex = 12
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 105)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 20)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Descripción"
         '
         'FrmProductos
         '

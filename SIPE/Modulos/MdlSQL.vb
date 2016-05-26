@@ -1316,22 +1316,14 @@ Module MdlSQL
                 ValidaCamposProducto = False
                 faltantes &= "-Nombre " & vbCrLf
             End If
-            If Trim(.txtDescripcion.Text) = "" Then
-                ValidaCamposProducto = False
-                faltantes &= "-Descripcion " & vbCrLf
-            End If
+            'If Trim(.txtDescripcion.Text) = "" Then
+            '    ValidaCamposProducto = False
+            '    faltantes &= "-Descripcion " & vbCrLf
+            'End If
             If Trim(.txtPrecio.Text) = "" Then 'Or CDbl(.txtPrecio.Text) <= 0 Then
                 ValidaCamposProducto = False
                 faltantes &= "-Precio " & vbCrLf
             End If
-            'If Trim(.txtPrecioEspecial.Text) = "" Or CDbl(.txtPrecioEspecial.Text) <= 0 Then
-            '    ValidaCamposProducto = False
-            '    faltantes &= "-Precio Especial " & vbCrLf
-            'End If
-            'If Trim(.txtPrecioSuperEspecial.Text) = "" Then
-            '    ValidaCamposProducto = False
-            '    faltantes &= "-Precio Super Especial " & vbCrLf
-            'End If
         End With
 
         If ValidaCamposProducto = False Then

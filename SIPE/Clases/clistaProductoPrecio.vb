@@ -39,6 +39,7 @@ Public Class clistaProductoPrecio
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@MedidaId", .cboMedida.SelectedValue))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@PesoId", .cboPeso.SelectedValue))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@ListaId", .cboListaPrecios.SelectedValue))
+                cmd.Parameters.Add(New SqlClient.SqlParameter("@RellenoId", .cboTipoRelleno.SelectedValue))
                 '
                 cmd.Transaction = Transaccion
 

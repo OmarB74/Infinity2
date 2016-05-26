@@ -86,6 +86,7 @@ Partial Class FrmLiberaProductoSucursal
         Me.dgvProductoSucursal.AllowUserToAddRows = False
         Me.dgvProductoSucursal.AllowUserToDeleteRows = False
         Me.dgvProductoSucursal.AllowUserToResizeRows = False
+        Me.dgvProductoSucursal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvProductoSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProductoSucursal.Location = New System.Drawing.Point(12, 30)
         Me.dgvProductoSucursal.Name = "dgvProductoSucursal"
