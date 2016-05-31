@@ -29,6 +29,8 @@
     End Sub
 
     Private Sub FrmBusquedaListaProductoPrecio_Load1(sender As Object, e As EventArgs) Handles Me.Load
+        sProducto = ""
+        '
         If bRealizaBusquedaVentanilla Then
             Label5.Visible = False
             txtCodigodeBarras.Visible = False

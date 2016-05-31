@@ -319,6 +319,12 @@
     <Compile Include="FrmReporteCredencial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmReporteNota.Designer.vb">
+      <DependentUpon>FrmReporteNota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteNota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmReporteProductos.Designer.vb">
       <DependentUpon>FrmReporteProductos.vb</DependentUpon>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteCredencial.resx">
       <DependentUpon>FrmReporteCredencial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteNota.resx">
+      <DependentUpon>FrmReporteNota.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProductos.resx">
       <DependentUpon>FrmReporteProductos.vb</DependentUpon>
