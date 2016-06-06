@@ -36,16 +36,17 @@ Partial Class FrmMenuPrincipal
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Liberar Almacen", 18, 18)
         Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Dispersion", 20, 20)
         Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Administracion", 19, 19, New System.Windows.Forms.TreeNode() {TreeNode12})
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Produccion", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode10, TreeNode11, TreeNode13})
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Usuario", 6, 6)
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pantallas", 7, 7)
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Perfil", 8, 8)
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Permisos", 9, 9)
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Empresa", 10, 10)
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Colonias", 14, 14)
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sucursales")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seguridad", 11, 11, New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Salir", 12, 12)
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mermas", 21, 21)
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Produccion", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode10, TreeNode11, TreeNode13, TreeNode14})
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Usuario", 6, 6)
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pantallas", 7, 7)
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Perfil", 8, 8)
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Permisos", 9, 9)
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Empresa", 10, 10)
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Colonias", 14, 14)
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sucursales")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seguridad", 11, 11, New System.Windows.Forms.TreeNode() {TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode20, TreeNode21, TreeNode22})
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Salir", 12, 12)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuPrincipal))
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
@@ -111,43 +112,47 @@ Partial Class FrmMenuPrincipal
         TreeNode13.Name = "NodoAdministracion"
         TreeNode13.SelectedImageIndex = 19
         TreeNode13.Text = "Administracion"
-        TreeNode14.Name = "NodoProduccion"
-        TreeNode14.Text = "Produccion"
-        TreeNode15.ImageIndex = 6
-        TreeNode15.Name = "NodoUsuario"
-        TreeNode15.SelectedImageIndex = 6
-        TreeNode15.Text = "Usuario"
-        TreeNode16.ImageIndex = 7
-        TreeNode16.Name = "NodoPantallas"
-        TreeNode16.SelectedImageIndex = 7
-        TreeNode16.Text = "Pantallas"
-        TreeNode17.ImageIndex = 8
-        TreeNode17.Name = "NodoPerfil"
-        TreeNode17.SelectedImageIndex = 8
-        TreeNode17.Text = "Perfil"
-        TreeNode18.ImageIndex = 9
-        TreeNode18.Name = "NodoPermisos"
-        TreeNode18.SelectedImageIndex = 9
-        TreeNode18.Text = "Permisos"
-        TreeNode19.ImageIndex = 10
-        TreeNode19.Name = "NodoEmpresa"
-        TreeNode19.SelectedImageIndex = 10
-        TreeNode19.Text = "Empresa"
-        TreeNode20.ImageIndex = 14
-        TreeNode20.Name = "NodoColonia"
-        TreeNode20.SelectedImageIndex = 14
-        TreeNode20.Text = "Colonias"
-        TreeNode21.Name = "NodoSucursales"
-        TreeNode21.Text = "Sucursales"
-        TreeNode22.ImageIndex = 11
-        TreeNode22.Name = "NodoSeguridad"
-        TreeNode22.SelectedImageIndex = 11
-        TreeNode22.Text = "Seguridad"
-        TreeNode23.ImageIndex = 12
-        TreeNode23.Name = "NodoSalir"
-        TreeNode23.SelectedImageIndex = 12
-        TreeNode23.Text = "Salir"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode22, TreeNode23})
+        TreeNode14.ImageIndex = 21
+        TreeNode14.Name = "NodoMermas"
+        TreeNode14.SelectedImageIndex = 21
+        TreeNode14.Text = "Mermas"
+        TreeNode15.Name = "NodoProduccion"
+        TreeNode15.Text = "Produccion"
+        TreeNode16.ImageIndex = 6
+        TreeNode16.Name = "NodoUsuario"
+        TreeNode16.SelectedImageIndex = 6
+        TreeNode16.Text = "Usuario"
+        TreeNode17.ImageIndex = 7
+        TreeNode17.Name = "NodoPantallas"
+        TreeNode17.SelectedImageIndex = 7
+        TreeNode17.Text = "Pantallas"
+        TreeNode18.ImageIndex = 8
+        TreeNode18.Name = "NodoPerfil"
+        TreeNode18.SelectedImageIndex = 8
+        TreeNode18.Text = "Perfil"
+        TreeNode19.ImageIndex = 9
+        TreeNode19.Name = "NodoPermisos"
+        TreeNode19.SelectedImageIndex = 9
+        TreeNode19.Text = "Permisos"
+        TreeNode20.ImageIndex = 10
+        TreeNode20.Name = "NodoEmpresa"
+        TreeNode20.SelectedImageIndex = 10
+        TreeNode20.Text = "Empresa"
+        TreeNode21.ImageIndex = 14
+        TreeNode21.Name = "NodoColonia"
+        TreeNode21.SelectedImageIndex = 14
+        TreeNode21.Text = "Colonias"
+        TreeNode22.Name = "NodoSucursales"
+        TreeNode22.Text = "Sucursales"
+        TreeNode23.ImageIndex = 11
+        TreeNode23.Name = "NodoSeguridad"
+        TreeNode23.SelectedImageIndex = 11
+        TreeNode23.Text = "Seguridad"
+        TreeNode24.ImageIndex = 12
+        TreeNode24.Name = "NodoSalir"
+        TreeNode24.SelectedImageIndex = 12
+        TreeNode24.Text = "Salir"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode23, TreeNode24})
         Me.TreeView1.SelectedImageIndex = 0
         Me.TreeView1.Size = New System.Drawing.Size(295, 361)
         Me.TreeView1.TabIndex = 0
@@ -177,6 +182,7 @@ Partial Class FrmMenuPrincipal
         Me.ImageList1.Images.SetKeyName(18, "LiberarAlmacen.png")
         Me.ImageList1.Images.SetKeyName(19, "administracion.png")
         Me.ImageList1.Images.SetKeyName(20, "dispersion.png")
+        Me.ImageList1.Images.SetKeyName(21, "Perdida.png")
         '
         'Label1
         '
