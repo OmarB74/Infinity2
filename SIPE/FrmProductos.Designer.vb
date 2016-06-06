@@ -79,7 +79,7 @@ Partial Class FrmProductos
         Me.txtNombre.MaxLength = 250
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(420, 26)
-        Me.txtNombre.TabIndex = 12
+        Me.txtNombre.TabIndex = 1
         '
         'Label3
         '
@@ -98,7 +98,7 @@ Partial Class FrmProductos
         Me.cboUnidad.Location = New System.Drawing.Point(166, 168)
         Me.cboUnidad.Name = "cboUnidad"
         Me.cboUnidad.Size = New System.Drawing.Size(168, 28)
-        Me.cboUnidad.TabIndex = 11
+        Me.cboUnidad.TabIndex = 4
         '
         'Label5
         '
@@ -154,7 +154,7 @@ Partial Class FrmProductos
         Me.txtPrecio.MaxLength = 20
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(164, 26)
-        Me.txtPrecio.TabIndex = 2
+        Me.txtPrecio.TabIndex = 3
         Me.txtPrecio.Text = "0.00"
         Me.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -166,7 +166,7 @@ Partial Class FrmProductos
         Me.txtDescripcion.MaxLength = 250
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(420, 26)
-        Me.txtDescripcion.TabIndex = 1
+        Me.txtDescripcion.TabIndex = 2
         '
         'txtCodigoProducto
         '
