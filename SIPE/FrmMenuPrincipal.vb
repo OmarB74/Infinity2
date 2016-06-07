@@ -152,6 +152,15 @@
                         MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
                     End If
                 End If
+                'FrmMermas
+                If TreeView1.SelectedNode.Name.Equals("NodoMermas") Then
+                    If ValidaPerfil(iUsuario, "FrmMermas") Then
+                        Dim FrmMermas As New FrmMermas
+                        FrmMermas.ShowDialog()
+                    Else
+                        MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+                    End If
+                End If
             Case Keys.Up, Keys.Down
                 bCerrarForma = False
         End Select
@@ -307,6 +316,15 @@
             If ValidaPerfil(iUsuario, "FrmDistribucion") Then
                 Dim FrmDistribucion As New FrmDistribucion
                 FrmDistribucion.ShowDialog()
+            Else
+                MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+            End If
+        End If
+        'FrmMermas
+        If e.Node.Name.Equals("NodoMermas") Then
+            If ValidaPerfil(iUsuario, "FrmMermas") Then
+                Dim FrmMermas As New FrmMermas
+                FrmMermas.ShowDialog()
             Else
                 MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
             End If

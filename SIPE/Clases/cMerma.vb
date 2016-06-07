@@ -6,7 +6,7 @@ Public Class cMerma
     Private cmd As SqlCommand
     Private param As SqlParameter
     Private da As SqlDataAdapter
-    Private Sub GuardaMerma(ByVal frmMerma As FrmMermas)
+    Public Sub GuardaMerma(ByVal frmMerma As FrmMermas)
         Dim Transaccion As SqlTransaction = Nothing
         Try
             Cnn = New SqlConnection()

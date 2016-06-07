@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 Public Class FrmMermas
     Dim objProducto As New cProductos
     Dim objUnidad As New cUnidad
+    Dim objMermas As New cMerma
     Private Cnn As SqlConnection
     Private cmd As SqlCommand
     Private param As SqlParameter
@@ -13,8 +14,11 @@ Public Class FrmMermas
     End Sub
     Private Sub LimpiarCampos()
         '
+        LlenaCombosStatus = False
         LlenarComboProductos(cboProducto, cstrConnectBDapp) 'Llena el combo
         LlenarComboUnidad(cboUnidad, cstrConnectBDapp) 'Llena el combo
+        LlenaCombosStatus = True
+        cboUnidad.SelectedValue = objUnidad.BusquedaUnidad(cboProducto.SelectedValue)
         '
         txtCantidad.Text = ""
         txtCantidad.Select()
@@ -42,10 +46,26 @@ Public Class FrmMermas
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Select Case MsgBox("¿Esta seguro(a) de querer guardar la merma?", vbYesNo)
             Case vbYes
-                GuardaMerma
+                If Len(Trim(txtCantidad.Text)) > 0 Then
+                    GuardaMerma()
+                End If
         End Select
     End Sub
     Private Sub GuardaMerma()
+        objMermas.GuardaMerma(Me)
+    End Sub
 
+    Private Sub cboProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProducto.SelectedIndexChanged
+        If LlenaCombosStatus Then
+            cboUnidad.SelectedValue = objUnidad.BusquedaUnidad(cboProducto.SelectedValue)
+        End If
+    End Sub
+
+    Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
+        e.Handled = Numero(e, txtCantidad)
+        '
+        Me.txtCantidad.Text = Trim(Replace(Me.txtCantidad.Text, "  ", " "))
+        '
+        txtCantidad.Select(txtCantidad.Text.Length, 0)
     End Sub
 End Class

@@ -80,6 +80,7 @@ Partial Class FrmMermas
         'cboUnidad
         '
         Me.cboUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboUnidad.Enabled = False
         Me.cboUnidad.FormattingEnabled = True
         Me.cboUnidad.Location = New System.Drawing.Point(89, 103)
         Me.cboUnidad.Margin = New System.Windows.Forms.Padding(4)
