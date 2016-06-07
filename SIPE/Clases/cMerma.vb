@@ -19,7 +19,7 @@ Public Class cMerma
                 cmd.CommandText = "spGuardaMerma"
                 '
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.Add(New SqlClient.SqlParameter("@ProdcutoId", .cboProducto.SelectedValue))
+                cmd.Parameters.Add(New SqlClient.SqlParameter("@ProductoId", .cboProducto.SelectedValue))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@Cantidad", .txtCantidad.Text))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@UnidadId", .cboUnidad.SelectedValue))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@UsuarioId", iUsuario))
