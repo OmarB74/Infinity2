@@ -54,7 +54,8 @@ Partial Class FrmListaSucursales
         Me.ClientSize = New System.Drawing.Size(850, 444)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FrmListaSucursales"
-        Me.Text = "FrmListaSucursales"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Lista Sucursales"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

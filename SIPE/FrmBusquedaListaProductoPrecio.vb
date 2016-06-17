@@ -13,11 +13,11 @@
     End Sub
     Private Sub ArmaSentencia()
         Try
-            If Trim(txtCodigodeBarras.Text) <> "" Then
-                sCodigodeBarras = txtCodigodeBarras.Text
+            If rbCodigoProducto.Checked Then
+                sCodigoProducto = txtCodigoProducto.Text
                 bRealizarBusquedaCondicionada = True
             End If
-            If Trim(txtProducto.Text) <> "" Then
+            If rbNombreproducto.Checked Then
                 sProducto = txtProducto.Text
                 bRealizarBusquedaCondicionada = True
             End If
@@ -31,14 +31,43 @@
     Private Sub FrmBusquedaListaProductoPrecio_Load1(sender As Object, e As EventArgs) Handles Me.Load
         sProducto = ""
         '
-        If bRealizaBusquedaVentanilla Then
-            Label5.Visible = False
-            txtCodigodeBarras.Visible = False
-            Panel1.Visible = True
-        End If
+        'If bRealizaBusquedaVentanilla Then
+        '    txtCodigoProducto.Visible = False
+        'End If
     End Sub
 
     Private Sub txtProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProducto.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            btnBuscar.Focus()
+        End If
+    End Sub
+
+
+    Private Sub rbCodigoProducto_Click(sender As Object, e As EventArgs) Handles rbCodigoProducto.Click
+        If rbCodigoProducto.Checked Then
+            txtProducto.Enabled = False
+            txtCodigoProducto.Enabled = True
+            txtCodigoProducto.Select()
+            txtCodigoProducto.Focus()
+        Else
+            txtProducto.Enabled = True
+            txtCodigoProducto.Enabled = False
+        End If
+    End Sub
+
+    Private Sub rbNombreproducto_Click(sender As Object, e As EventArgs) Handles rbNombreproducto.Click
+        If rbNombreproducto.Checked Then
+            txtProducto.Enabled = True
+            txtCodigoProducto.Enabled = False
+            txtProducto.Select()
+            txtProducto.Focus()
+        Else
+            txtProducto.Enabled = False
+            txtCodigoProducto.Enabled = True
+        End If
+    End Sub
+
+    Private Sub txtCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodigoProducto.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             btnBuscar.Focus()
         End If

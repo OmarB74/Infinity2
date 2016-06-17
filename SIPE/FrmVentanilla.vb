@@ -30,7 +30,9 @@ Public Class FrmVentanilla
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         If Trim(txtCodigoBarras.Text) = "" And Len(txtCodigoBarras.Text) = 0 Then
-            sCodigodeBarras = ""
+            'sCodigodeBarras = ""
+            sCodigoProducto = ""
+            sCodigoBarrasV = ""
             bRealizaBusquedaVentanilla = True
             Dim frmbusqueda As New FrmBusquedaListaProductoPrecio
             frmbusqueda.ShowDialog()
@@ -88,7 +90,7 @@ Public Class FrmVentanilla
     Private Function BuscaProducto() As DataSet
         Dim ds As New DataSet
         Dim iTipoBusqueda As Int16
-        iTipoBusqueda = 2
+        iTipoBusqueda = 4
         sCodigodeBarras = Me.txtCodigoBarras.Text
         Try
             '
@@ -103,9 +105,9 @@ Public Class FrmVentanilla
                 param.Value = iTipoBusqueda                           '
                 .Parameters.Add(param)
                 '
-                param = New SqlParameter("@CodigodeBarras", SqlDbType.VarChar, 50)
+                param = New SqlParameter("@CodigoProducto", SqlDbType.VarChar, 50)
                 param.Direction = ParameterDirection.Input      'parametro entrada
-                param.Value = sCodigodeBarras                           '
+                param.Value = sCodigoProducto                           '
                 .Parameters.Add(param)
                 '
                 param = New SqlParameter("@Producto", SqlDbType.VarChar, 250)
@@ -113,6 +115,10 @@ Public Class FrmVentanilla
                 param.Value = sProducto                           '
                 .Parameters.Add(param)
                 '
+                param = New SqlParameter("@CodigodeBarras", SqlDbType.VarChar, 50)
+                param.Direction = ParameterDirection.Input      'parametro entrada
+                param.Value = sCodigodeBarras                           '
+                .Parameters.Add(param)
 
             End With
             '

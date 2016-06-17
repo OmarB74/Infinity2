@@ -104,6 +104,7 @@ Public Class FrmLogin
                     iUsuario = RTrim((readerInfo.GetValue(3)))
                     iProfileId = readerInfo.GetValue(4)
                     sFechaSistema = FormatDateTime(readerInfo.GetValue(6), DateFormat.ShortDate)
+                    sSucursal = RTrim((readerInfo.GetValue(8)))
                 End While
                 readerInfo.Close()
             Catch

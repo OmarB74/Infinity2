@@ -54,6 +54,8 @@ Partial Class FrmMenuPrincipal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblFechaSistema = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblSucursal = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TreeView1
@@ -199,7 +201,7 @@ Partial Class FrmMenuPrincipal
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 414)
+        Me.Label2.Location = New System.Drawing.Point(3, 414)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
@@ -228,11 +230,35 @@ Partial Class FrmMenuPrincipal
         Me.LblFechaSistema.TabIndex = 4
         Me.LblFechaSistema.Text = "25/02/2015"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 455)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Sucursal:"
+        '
+        'LblSucursal
+        '
+        Me.LblSucursal.AutoSize = True
+        Me.LblSucursal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSucursal.Location = New System.Drawing.Point(84, 455)
+        Me.LblSucursal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSucursal.Name = "LblSucursal"
+        Me.LblSucursal.Size = New System.Drawing.Size(54, 13)
+        Me.LblSucursal.TabIndex = 6
+        Me.LblSucursal.Text = "MATRIZ"
+        '
         'FrmMenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(324, 552)
+        Me.Controls.Add(Me.LblSucursal)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LblFechaSistema)
         Me.Controls.Add(Me.LblUsuario)
         Me.Controls.Add(Me.Label2)
@@ -255,4 +281,6 @@ Partial Class FrmMenuPrincipal
     Friend WithEvents LblUsuario As System.Windows.Forms.Label
     Friend WithEvents LblFechaSistema As System.Windows.Forms.Label
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents Label3 As Label
+    Friend WithEvents LblSucursal As Label
 End Class

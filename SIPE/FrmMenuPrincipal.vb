@@ -350,6 +350,7 @@
     Private Sub FrmMenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LblUsuario.Text = NombreUsuario
         LblFechaSistema.Text = sFechaSistema
+        LblSucursal.Text = sSucursal
     End Sub
 
 End Class

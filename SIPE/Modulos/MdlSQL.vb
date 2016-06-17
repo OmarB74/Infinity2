@@ -41,13 +41,16 @@ Module MdlSQL
     Public bRealizarCobro As Boolean = False
     Public XMLNotaVentaDetalle As String
     Public iNotaId As Integer = 0
+    '
+    Public sSucursal As String = ""
 #Region "Variable spublicas para busqueda"
     Public iFoliobusqueda As Integer = 0
     Public sNombresbusqueda As String = ""
     Public sApellidosbusqueda As String = ""
     Public sRazonSocialbusqueda As String = ""
-    Public sCodigodeBarras As String = ""
+    Public sCodigoProducto As String = ""
     Public sProducto As String = ""
+    Public sCodigodeBarras As String = ""
 #End Region
     Public Function GetcstrConnectBDapp(ByVal strServer As String) As String
         GetcstrConnectBDapp = ""

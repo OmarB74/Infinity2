@@ -14,7 +14,7 @@ Public Class FrmEncontradosListaProductoPrecio
 
         ListView1.Columns.Add("Identificador", 0)
         ListView1.Columns.Add("Codigo de Barras", 150)
-        ListView1.Columns.Add("Producto", 250)
+        ListView1.Columns.Add("Producto", 350)
         ListView1.Columns.Add("Precio", 100)
         ListView1.Columns.Add("Contenido", 100)
         ListView1.Columns.Add("Peso", 100)
@@ -30,7 +30,7 @@ Public Class FrmEncontradosListaProductoPrecio
         iTipoBusqueda = 1
         Try
 
-            If sCodigodeBarras <> "" Then
+            If sCodigoProducto <> "" Then
                 iTipoBusqueda = 2
             Else
                 If sProducto <> "" Then
@@ -46,8 +46,9 @@ Public Class FrmEncontradosListaProductoPrecio
             cmd.CommandText = "spBusquedaListaProductoPrecio"
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add(New SqlClient.SqlParameter("@TipoBusqueda", iTipoBusqueda))
-            cmd.Parameters.Add(New SqlClient.SqlParameter("@CodigodeBarras", sCodigodeBarras))
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@CodigoProducto", sCodigoProducto))
             cmd.Parameters.Add(New SqlClient.SqlParameter("@Producto", sProducto))
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@CodigodeBarras", sCodigodeBarras))
 
             Dim read As SqlDataReader = cmd.ExecuteReader()
             listado.Items.Clear()

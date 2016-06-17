@@ -34,7 +34,7 @@ Partial Class FrmEncontradosListaProductoPrecio
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(904, 401)
+        Me.GroupBox1.Size = New System.Drawing.Size(978, 401)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
@@ -43,7 +43,7 @@ Partial Class FrmEncontradosListaProductoPrecio
         Me.ListView1.Location = New System.Drawing.Point(8, 13)
         Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(888, 375)
+        Me.ListView1.Size = New System.Drawing.Size(962, 375)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -51,7 +51,7 @@ Partial Class FrmEncontradosListaProductoPrecio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(912, 415)
+        Me.ClientSize = New System.Drawing.Size(985, 415)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)

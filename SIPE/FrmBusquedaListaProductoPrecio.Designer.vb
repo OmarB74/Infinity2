@@ -23,53 +23,33 @@ Partial Class FrmBusquedaListaProductoPrecio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBusquedaListaProductoPrecio))
-        Me.txtCodigodeBarras = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
         Me.txtProducto = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rbCodigoProducto = New System.Windows.Forms.RadioButton()
+        Me.rbNombreproducto = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
-        'txtCodigodeBarras
+        'txtCodigoProducto
         '
-        Me.txtCodigodeBarras.Location = New System.Drawing.Point(165, 19)
-        Me.txtCodigodeBarras.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txtCodigodeBarras.MaxLength = 10
-        Me.txtCodigodeBarras.Name = "txtCodigodeBarras"
-        Me.txtCodigodeBarras.Size = New System.Drawing.Size(187, 26)
-        Me.txtCodigodeBarras.TabIndex = 14
-        Me.txtCodigodeBarras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(17, 22)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 20)
-        Me.Label5.TabIndex = 19
-        Me.Label5.Text = "Codigo de Barras"
+        Me.txtCodigoProducto.Location = New System.Drawing.Point(188, 23)
+        Me.txtCodigoProducto.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txtCodigoProducto.MaxLength = 10
+        Me.txtCodigoProducto.Name = "txtCodigoProducto"
+        Me.txtCodigoProducto.Size = New System.Drawing.Size(187, 26)
+        Me.txtCodigoProducto.TabIndex = 14
+        Me.txtCodigoProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtProducto
         '
-        Me.txtProducto.Location = New System.Drawing.Point(165, 73)
+        Me.txtProducto.Enabled = False
+        Me.txtProducto.Location = New System.Drawing.Point(188, 73)
         Me.txtProducto.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtProducto.MaxLength = 100
         Me.txtProducto.Name = "txtProducto"
-        Me.txtProducto.Size = New System.Drawing.Size(359, 26)
+        Me.txtProducto.Size = New System.Drawing.Size(336, 26)
         Me.txtProducto.TabIndex = 16
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 77)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 20)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Producto"
         '
         'btnCancelar
         '
@@ -97,26 +77,39 @@ Partial Class FrmBusquedaListaProductoPrecio
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'rbCodigoProducto
         '
-        Me.Panel1.Location = New System.Drawing.Point(21, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(503, 53)
-        Me.Panel1.TabIndex = 20
-        Me.Panel1.Visible = False
+        Me.rbCodigoProducto.AutoSize = True
+        Me.rbCodigoProducto.Checked = True
+        Me.rbCodigoProducto.Location = New System.Drawing.Point(12, 24)
+        Me.rbCodigoProducto.Name = "rbCodigoProducto"
+        Me.rbCodigoProducto.Size = New System.Drawing.Size(145, 24)
+        Me.rbCodigoProducto.TabIndex = 20
+        Me.rbCodigoProducto.TabStop = True
+        Me.rbCodigoProducto.Text = "Codigo Producto"
+        Me.rbCodigoProducto.UseVisualStyleBackColor = True
+        '
+        'rbNombreproducto
+        '
+        Me.rbNombreproducto.AutoSize = True
+        Me.rbNombreproducto.Location = New System.Drawing.Point(12, 75)
+        Me.rbNombreproducto.Name = "rbNombreproducto"
+        Me.rbNombreproducto.Size = New System.Drawing.Size(151, 24)
+        Me.rbNombreproducto.TabIndex = 21
+        Me.rbNombreproducto.Text = "Nombre Producto"
+        Me.rbNombreproducto.UseVisualStyleBackColor = True
         '
         'FrmBusquedaListaProductoPrecio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(543, 211)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.txtCodigodeBarras)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.rbNombreproducto)
+        Me.Controls.Add(Me.rbCodigoProducto)
+        Me.Controls.Add(Me.txtCodigoProducto)
         Me.Controls.Add(Me.txtProducto)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
@@ -129,11 +122,10 @@ Partial Class FrmBusquedaListaProductoPrecio
 
     End Sub
 
-    Friend WithEvents txtCodigodeBarras As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents txtCodigoProducto As TextBox
     Friend WithEvents txtProducto As TextBox
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents rbCodigoProducto As RadioButton
+    Friend WithEvents rbNombreproducto As RadioButton
 End Class
