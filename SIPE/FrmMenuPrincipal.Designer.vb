@@ -28,23 +28,23 @@ Partial Class FrmMenuPrincipal
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Proveedor", 1, 1)
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Cliente", 13, 13)
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Productos", 2, 2)
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Importacion Precios")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Importacion Precios", 25, 25)
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tipo Listas", 17, 17)
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Producto Precio")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Producto Precio", 24, 24)
         Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Producto Sucursal", 16, 16)
         Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Catalogos", 15, 15, New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode4, TreeNode5, TreeNode6, TreeNode7, TreeNode8, TreeNode9})
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Liberar Almacen", 18, 18)
         Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Dispersion", 20, 20)
         Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Administracion", 19, 19, New System.Windows.Forms.TreeNode() {TreeNode12})
         Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mermas", 21, 21)
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Produccion", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode10, TreeNode11, TreeNode13, TreeNode14})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Produccion", 22, 22, New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode10, TreeNode11, TreeNode13, TreeNode14})
         Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Usuario", 6, 6)
         Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pantallas", 7, 7)
         Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Perfil", 8, 8)
         Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Permisos", 9, 9)
         Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Empresa", 10, 10)
         Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Colonias", 14, 14)
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sucursales")
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sucursales", 23, 23)
         Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Seguridad", 11, 11, New System.Windows.Forms.TreeNode() {TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode20, TreeNode21, TreeNode22})
         Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Salir", 12, 12)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuPrincipal))
@@ -86,13 +86,17 @@ Partial Class FrmMenuPrincipal
         TreeNode5.Name = "NodoProductos"
         TreeNode5.SelectedImageIndex = 2
         TreeNode5.Text = "Productos"
+        TreeNode6.ImageIndex = 25
         TreeNode6.Name = "NodoImporta"
+        TreeNode6.SelectedImageIndex = 25
         TreeNode6.Text = "Importacion Precios"
         TreeNode7.ImageIndex = 17
         TreeNode7.Name = "NodoTipoListas"
         TreeNode7.SelectedImageIndex = 17
         TreeNode7.Text = "Tipo Listas"
+        TreeNode8.ImageIndex = 24
         TreeNode8.Name = "NodoListaProductoPrecio"
+        TreeNode8.SelectedImageIndex = 24
         TreeNode8.Text = "Lista Producto Precio"
         TreeNode9.ImageIndex = 16
         TreeNode9.Name = "NodoProductoSucursal"
@@ -118,7 +122,9 @@ Partial Class FrmMenuPrincipal
         TreeNode14.Name = "NodoMermas"
         TreeNode14.SelectedImageIndex = 21
         TreeNode14.Text = "Mermas"
+        TreeNode15.ImageIndex = 22
         TreeNode15.Name = "NodoProduccion"
+        TreeNode15.SelectedImageIndex = 22
         TreeNode15.Text = "Produccion"
         TreeNode16.ImageIndex = 6
         TreeNode16.Name = "NodoUsuario"
@@ -144,7 +150,9 @@ Partial Class FrmMenuPrincipal
         TreeNode21.Name = "NodoColonia"
         TreeNode21.SelectedImageIndex = 14
         TreeNode21.Text = "Colonias"
+        TreeNode22.ImageIndex = 23
         TreeNode22.Name = "NodoSucursales"
+        TreeNode22.SelectedImageIndex = 23
         TreeNode22.Text = "Sucursales"
         TreeNode23.ImageIndex = 11
         TreeNode23.Name = "NodoSeguridad"
@@ -185,6 +193,10 @@ Partial Class FrmMenuPrincipal
         Me.ImageList1.Images.SetKeyName(19, "administracion.png")
         Me.ImageList1.Images.SetKeyName(20, "dispersion.png")
         Me.ImageList1.Images.SetKeyName(21, "Perdida.png")
+        Me.ImageList1.Images.SetKeyName(22, "infinityLogo1.png")
+        Me.ImageList1.Images.SetKeyName(23, "store.png")
+        Me.ImageList1.Images.SetKeyName(24, "listaPrecioProductos.png")
+        Me.ImageList1.Images.SetKeyName(25, "ImportacionPrecios.png")
         '
         'Label1
         '

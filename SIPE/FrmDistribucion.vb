@@ -31,7 +31,7 @@ Public Class FrmDistribucion
         Try
             ' Se va a conectar a la base al servidor establecido y login establecido para la aplicacion            
             Cnn = New SqlConnection(cstrConnectBDapp)
-            cmd = New SqlCommand("exec spListaProductoSucursalPorLiberar " & cboSucursal.SelectedValue & "," & dtpFecha.Value & "", Cnn)
+            cmd = New SqlCommand("exec spListaNotasDispersion " & cboSucursal.SelectedValue & "," & dtpFecha.Value & "", Cnn)
             cmd.CommandType = CommandType.Text       'asignar tipo de instruccion a ejecutar
             '
             da = New SqlDataAdapter  'crear objeto data adapter
