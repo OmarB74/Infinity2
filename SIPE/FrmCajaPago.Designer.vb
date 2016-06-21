@@ -123,9 +123,9 @@ Partial Class FrmCajaPago
         Me.Label4.Location = New System.Drawing.Point(13, 56)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(123, 20)
+        Me.Label4.Size = New System.Drawing.Size(91, 20)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Descuento 10%"
+        Me.Label4.Text = "Descuento "
         '
         'rbSI
         '
