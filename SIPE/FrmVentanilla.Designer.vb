@@ -137,7 +137,8 @@ Partial Class FrmVentanilla
         Me.txtAtajos.Name = "txtAtajos"
         Me.txtAtajos.Size = New System.Drawing.Size(256, 202)
         Me.txtAtajos.TabIndex = 0
-        Me.txtAtajos.Text = "<F2> Buscar Producto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F3> Buscar Cliente" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F4> Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F5> Guardar"
+        Me.txtAtajos.Text = "<F2> Buscar Producto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F3> Buscar Cliente" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F4> Limpiar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F5> Guardar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<F6> Borra" &
+    "r Fila"
         '
         'Label3
         '

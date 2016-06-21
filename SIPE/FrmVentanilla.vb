@@ -19,6 +19,13 @@ Public Class FrmVentanilla
         If e.KeyCode = Keys.F5 Then
             btnGuardar_Click(sender, e)
         End If
+        If e.KeyCode = Keys.F6 Then
+            If dgvVentanilla.RowCount > 0 Then
+                Me.dgvVentanilla.Rows.Remove(dgvVentanilla.CurrentRow)
+                '
+                CalculaSubTotal()
+            End If
+        End If
     End Sub
     Private Sub FrmVentanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AgregaColumnas()
