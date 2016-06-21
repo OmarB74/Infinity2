@@ -129,6 +129,7 @@
     <Compile Include="Clases\cMerma.vb" />
     <Compile Include="Clases\CommManager.vb" />
     <Compile Include="Clases\cPeso.vb" />
+    <Compile Include="Clases\cPorcentajeDescuento.vb" />
     <Compile Include="Clases\cProductos.vb" />
     <Compile Include="Clases\cSucursal.vb" />
     <Compile Include="Clases\cTipoListas.vb" />

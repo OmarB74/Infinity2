@@ -1,8 +1,13 @@
 ﻿Public Class FrmCajaPago
     Public dImporte As Decimal = 0
+    Private Llenacbo As Boolean = False
+    Dim objPorcentajeDescuento As New cPorcentajeDescuento
     Private Sub FrmCajaPago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtImporte.Text = dImporte
         txtNeto.Text = CDbl(txtImporte.Text)
+        Llenacbo = False
+        LlenarcboPorcentajeDescuento(cboPorcentajeDescuento, cstrConnectBDapp)
+        Llenacbo = True
         txtEfectivo.Select()
         txtEfectivo.Focus()
     End Sub
@@ -60,17 +65,21 @@
 
     Private Sub rbSI_Click(sender As Object, e As EventArgs) Handles rbSI.Click
         If rbSI.Checked Then
-            txtDescuento.Text = 0.1 * CDbl(txtImporte.Text)
+            cboPorcentajeDescuento.Enabled = True
+            'txtDescuento.Text = 0.1 * CDbl(txtImporte.Text)
+            txtDescuento.Text = CInt(cboPorcentajeDescuento.Text) / 100.0 * CDbl(txtImporte.Text)
             txtNeto.Text = CDbl(txtImporte.Text) - CDbl(txtDescuento.Text)
             'Else
             '    txtDescuento.Text = "0.00"
             '    txtNeto.Text = CDbl(txtImporte.Text)
+
         End If
     End Sub
 
     Private Sub rbNO_Click(sender As Object, e As EventArgs) Handles rbNO.Click
         If rbNO.Checked Then
             txtDescuento.Text = "0.00"
+            cboPorcentajeDescuento.Enabled = False
             txtNeto.Text = CDbl(txtImporte.Text)
         End If
     End Sub
@@ -81,4 +90,16 @@
             MsgBox("Favor de checar la cantidad de efectivo", MsgBoxStyle.Information + vbOKOnly)
         End If
     End Function
+
+    Private Sub cboPorcentajeDescuento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPorcentajeDescuento.SelectedIndexChanged
+        If Llenacbo Then
+            txtDescuento.Text = CInt(cboPorcentajeDescuento.Text) / 100.0 * CDbl(txtImporte.Text)
+            txtNeto.Text = CDbl(txtImporte.Text) - CDbl(txtDescuento.Text)
+        End If
+    End Sub
+    Public Sub LlenarcboPorcentajeDescuento(ByVal objCombobox As ComboBox, ByVal strConexion As String)
+        objCombobox.DataSource = objPorcentajeDescuento.Obtener_PorcentajeDescuento(strConexion).Tables("PorcentajeDescuento")
+        objCombobox.DisplayMember = "Porcentaje"
+        objCombobox.ValueMember = "PorcentajeId"
+    End Sub
 End Class
