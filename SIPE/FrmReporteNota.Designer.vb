@@ -38,7 +38,7 @@ Partial Class FrmReporteNota
         Me.CrystalReportViewer1.ShowLogo = False
         Me.CrystalReportViewer1.ShowParameterPanelButton = False
         Me.CrystalReportViewer1.ShowRefreshButton = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(784, 768)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(878, 755)
         Me.CrystalReportViewer1.TabIndex = 2
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
@@ -46,7 +46,7 @@ Partial Class FrmReporteNota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 768)
+        Me.ClientSize = New System.Drawing.Size(878, 755)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False

@@ -74,6 +74,10 @@ Public Class FrmReportes
             Dim Reporte As New FrmSeleccionReporteProveedorCliente
             Reporte.ShowDialog()
         End If
+        If opcion = 3 Then
+            Dim Reporte As New FrmReporteVentas
+            Reporte.ShowDialog()
+        End If
         If opcion = 4 Then
             Dim Reporte As New FrmComprasProveedor
             Reporte.ShowDialog()

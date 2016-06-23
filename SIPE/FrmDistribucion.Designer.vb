@@ -194,18 +194,27 @@ Partial Class FrmDistribucion
         '
         Me.dgvNotasDisponibles.AllowUserToAddRows = False
         Me.dgvNotasDisponibles.AllowUserToDeleteRows = False
+        Me.dgvNotasDisponibles.AllowUserToResizeRows = False
+        Me.dgvNotasDisponibles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvNotasDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvNotasDisponibles.Location = New System.Drawing.Point(12, 96)
         Me.dgvNotasDisponibles.Name = "dgvNotasDisponibles"
+        Me.dgvNotasDisponibles.ReadOnly = True
         Me.dgvNotasDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvNotasDisponibles.Size = New System.Drawing.Size(294, 293)
         Me.dgvNotasDisponibles.TabIndex = 142
         '
         'dgvNotasAgregadas
         '
+        Me.dgvNotasAgregadas.AllowUserToAddRows = False
+        Me.dgvNotasAgregadas.AllowUserToDeleteRows = False
+        Me.dgvNotasAgregadas.AllowUserToResizeRows = False
+        Me.dgvNotasAgregadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvNotasAgregadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvNotasAgregadas.Location = New System.Drawing.Point(418, 96)
         Me.dgvNotasAgregadas.Name = "dgvNotasAgregadas"
+        Me.dgvNotasAgregadas.ReadOnly = True
+        Me.dgvNotasAgregadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvNotasAgregadas.Size = New System.Drawing.Size(294, 293)
         Me.dgvNotasAgregadas.TabIndex = 143
         '
