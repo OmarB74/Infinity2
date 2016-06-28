@@ -136,6 +136,12 @@
     <Compile Include="Clases\cTipoRelleno.vb" />
     <Compile Include="Clases\cUnidad.vb" />
     <Compile Include="Clases\EncryptionDecryption.vb" />
+    <Compile Include="FrmActualizacionMasivaPrecios.Designer.vb">
+      <DependentUpon>FrmActualizacionMasivaPrecios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizacionMasivaPrecios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAltaRapidaProveedor.Designer.vb">
       <DependentUpon>FrmAltaRapidaProveedor.vb</DependentUpon>
     </Compile>
@@ -485,6 +491,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmActualizacionMasivaPrecios.resx">
+      <DependentUpon>FrmActualizacionMasivaPrecios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAltaRapidaProveedor.resx">
       <DependentUpon>FrmAltaRapidaProveedor.vb</DependentUpon>
     </EmbeddedResource>

@@ -161,6 +161,15 @@
                         MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
                     End If
                 End If
+                'FrmActualizacionMasivaPrecios
+                If TreeView1.SelectedNode.Name.Equals("NodoActualizacionMasivaPreciosEsencias") Then
+                    If ValidaPerfil(iUsuario, "FrmActualizacionMasivaPrecios") Then
+                        Dim FrmActualizacionMasivaPrecios As New FrmActualizacionMasivaPrecios
+                        FrmActualizacionMasivaPrecios.ShowDialog()
+                    Else
+                        MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+                    End If
+                End If
             Case Keys.Up, Keys.Down
                 bCerrarForma = False
         End Select
@@ -325,6 +334,15 @@
             If ValidaPerfil(iUsuario, "FrmMermas") Then
                 Dim FrmMermas As New FrmMermas
                 FrmMermas.ShowDialog()
+            Else
+                MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+            End If
+        End If
+        'FrmActualizacionMasivaPrecios
+        If e.Node.Name.Equals("NodoActualizacionMasivaPreciosEsencias") Then
+            If ValidaPerfil(iUsuario, "FrmActualizacionMasivaPrecios") Then
+                Dim FrmActualizacionMasivaPrecios As New FrmActualizacionMasivaPrecios
+                FrmActualizacionMasivaPrecios.ShowDialog()
             Else
                 MsgBox("No tiene permisos de acceso a esta opción", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
             End If
