@@ -138,12 +138,17 @@ Public Class FrmLogin
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CombosLlenos = False
-        Me.cboServer.Items.Clear()
-        Me.cboServer.Items.Add("PRODUCCION")
-        cboServer.SelectedIndex = 0
-        CombosLlenos = True
-        Me.ActiveControl = Me.Controls(8)
+        If PrevInstance() = False Then
+            CombosLlenos = False
+            Me.cboServer.Items.Clear()
+            Me.cboServer.Items.Add("PRODUCCION")
+            cboServer.SelectedIndex = 0
+            CombosLlenos = True
+            Me.ActiveControl = Me.Controls(8)
+        Else
+            MsgBox("La aplicacion ya esta abierta", vbInformation)
+            End
+        End If
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

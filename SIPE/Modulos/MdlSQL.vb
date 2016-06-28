@@ -2683,4 +2683,12 @@ Module MdlSQL
             End If
         End If
     End Function
+
+    Function PrevInstance() As Boolean
+        If UBound(Diagnostics.Process.GetProcessesByName(Diagnostics.Process.GetCurrentProcess.ProcessName)) > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Module
