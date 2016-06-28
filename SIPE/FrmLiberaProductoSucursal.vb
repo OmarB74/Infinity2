@@ -12,6 +12,7 @@ Public Class FrmLiberaProductoSucursal
         LlenarComboSucursal(cboSucursal, cstrConnectBDapp)
         CargaProductosSucursal()
         llenocbo = True
+        Me.dgvProductoSucursal.ContextMenuStrip = Me.cmenu
     End Sub
     '
     Private Sub LlenarComboSucursal(ByVal objCombobox As ComboBox, ByVal strConexion As String)
@@ -93,6 +94,56 @@ Public Class FrmLiberaProductoSucursal
             '
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add(New SqlClient.SqlParameter("@FolioId", Id))
+            '
+            cmd.Transaction = Transaccion
+            '
+            cmd.ExecuteNonQuery()
+            '
+            cmd.Dispose()
+            Transaccion.Commit()
+            '
+        Catch ex As Exception
+            Transaccion.Rollback()
+            MsgBox(ex.Message)
+        Finally
+            If Not Cnn Is Nothing Then
+                If Cnn.State = ConnectionState.Open Then
+                    Cnn.Close()    'cerrar conexion
+                    Cnn = Nothing     'destruir objeto
+                End If
+            End If
+        End Try
+    End Sub
+
+    Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
+        If dgvProductoSucursal.Rows.Count > 0 Then
+            Dim selectedRowCount As Integer = dgvProductoSucursal.Rows.GetRowCount(DataGridViewElementStates.Selected)
+            If selectedRowCount > 0 Then
+                Select Case MsgBox("Esta seguro(a) de elimiar la fila", vbYesNo)
+                    Case vbYes
+                        Dim i As Integer
+                        For i = 0 To selectedRowCount - 1
+                            EliminaFiladgv(dgvProductoSucursal.SelectedRows(i).Cells(0).Value)
+                        Next i
+                End Select
+            Else
+                MsgBox("Favor de seleecionar una fila", vbInformation)
+            End If
+        End If
+    End Sub
+    Private Sub EliminaFiladgv(ByVal FolioId As Integer)
+        Dim Transaccion As SqlTransaction = Nothing
+        Try
+            Cnn = New SqlConnection()
+            Cnn.ConnectionString = cstrConnectBDapp
+            Cnn.Open()
+            '
+            Transaccion = Cnn.BeginTransaction
+            cmd = Cnn.CreateCommand
+            cmd.CommandText = "spBajaProductoSucursalxLiberar"
+            '
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@FolioId", FolioId))
             '
             cmd.Transaction = Transaccion
             '

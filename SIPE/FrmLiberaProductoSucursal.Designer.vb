@@ -22,15 +22,19 @@ Partial Class FrmLiberaProductoSucursal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnLibera = New System.Windows.Forms.Button()
         Me.cboSucursal = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvProductoSucursal = New System.Windows.Forms.DataGridView()
+        Me.cmenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvProductoSucursal, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cmenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -95,11 +99,23 @@ Partial Class FrmLiberaProductoSucursal
         Me.dgvProductoSucursal.Size = New System.Drawing.Size(616, 252)
         Me.dgvProductoSucursal.TabIndex = 0
         '
+        'cmenu
+        '
+        Me.cmenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarToolStripMenuItem})
+        Me.cmenu.Name = "cmenu"
+        Me.cmenu.Size = New System.Drawing.Size(118, 26)
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
         'FrmLiberaProductoSucursal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(668, 407)
+        Me.ClientSize = New System.Drawing.Size(677, 407)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -114,6 +130,7 @@ Partial Class FrmLiberaProductoSucursal
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvProductoSucursal, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.cmenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -124,4 +141,6 @@ Partial Class FrmLiberaProductoSucursal
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvProductoSucursal As DataGridView
+    Friend WithEvents cmenu As ContextMenuStrip
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
