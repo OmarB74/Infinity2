@@ -20,13 +20,20 @@ Public Class FrmDistribucion
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        CargaVentasSucursal
+        '
+        LimpiarForma()
+        '
+        CargaVentasSucursal()
     End Sub
     Private Sub CargaVentasSucursal()
         '
         'Limpia el Grid
         Me.dgvNotasDisponibles.DataSource = Nothing
         Me.dgvNotasDisponibles.Rows.Clear()
+        '
+        If ds.Tables.Count > 0 Then
+            ds.Tables(0).Clear()
+        End If
         '
         Try
             ' Se va a conectar a la base al servidor establecido y login establecido para la aplicacion            
@@ -74,6 +81,7 @@ Public Class FrmDistribucion
     Private Sub SumaTotalDisponibles()
         Dim total As Double = 0
         Dim iTotal As Integer = Me.dgvNotasDisponibles.Rows.Count
+        total = 0
         '
         Dim i As Integer
         '
@@ -177,5 +185,15 @@ Public Class FrmDistribucion
     End Sub
     Private Sub GeneraDispersion()
 
+    End Sub
+    Private Sub LimpiarForma()
+        dgvNotasDisponibles.DataSource = Nothing
+        dgvNotasDisponibles.Rows.Clear()
+        '
+        dgvNotasAgregadas.DataSource = Nothing
+        dgvNotasAgregadas.Rows.Clear()
+        '
+        lbTotalDisponibles.Text = ""
+        LbAgregadas.Text = ""
     End Sub
 End Class
