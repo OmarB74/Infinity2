@@ -23,6 +23,8 @@ Public Class cMerma
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@Cantidad", .txtCantidad.Text))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@UnidadId", .cboUnidad.SelectedValue))
                 cmd.Parameters.Add(New SqlClient.SqlParameter("@UsuarioId", iUsuario))
+                cmd.Parameters.Add(New SqlClient.SqlParameter("@MedidaId", .cboMedida.SelectedValue))
+                cmd.Parameters.Add(New SqlClient.SqlParameter("@ListaId", .cboUnidad.SelectedValue))
                 '
                 cmd.Transaction = Transaccion
                 '
