@@ -51,7 +51,7 @@ Public Class FrmDistribucion
         Finally
             If Not Cnn Is Nothing Then
                 If Cnn.State = ConnectionState.Open Then
-                    Cnn.Close()    'cerrar conexion
+                    Cnn.Close()    'cerra  
                     Cnn = Nothing     'destruir objeto
                 End If
             End If
@@ -62,13 +62,10 @@ Public Class FrmDistribucion
             Else
                 dgvNotasDisponibles.Columns.Clear()
                 dgvNotasDisponibles.DataSource = Nothing
-                dgvNotasDisponibles.DataSource = ds.Tables(0)
-                With Me.dgvNotasDisponibles
-                    .Columns("Nota_Total").DefaultCellStyle.Format = "c"
-                    .Columns("Nota_Total").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-                    .Columns("Nombre_Usuario").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                    .Columns("UsuarioId").Visible = False
-                End With
+                dgvNotasDisponibles.DataSource.Columns("Nota_Total").DefaultCellStyle.Format = "c"
+                dgvNotasDisponibles.DataSource.Columns("Nota_Total").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                dgvNotasDisponibles.DataSource.Columns("Nombre_Usuario").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                dgvNotasDisponibles.DataSource.Columns("UsuarioId").Visible = False
                 '
                 SumaTotalDisponibles()
                 'Clonar estructura
