@@ -44,7 +44,7 @@ Public Class FrmReimpresionComanda
             With cmd
                 .CommandType = CommandType.StoredProcedure       'asignar tipo de instruccion a ejecutar
 
-                param = New SqlParameter("@Codigo", SqlDbType.VarChar, 15)
+                param = New SqlParameter("@Codigo", SqlDbType.VarChar, 17)
                 param.Direction = ParameterDirection.Input      'parametro entrada
                 param.Value = txtFolioComanda.Text        'asignar
                 .Parameters.Add(param)

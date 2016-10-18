@@ -370,12 +370,6 @@
     <Compile Include="FrmReporteVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRptComanda.Designer.vb">
-      <DependentUpon>FrmRptComanda.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRptComanda.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmSeleccionReporteProveedorCliente.Designer.vb">
       <DependentUpon>FrmSeleccionReporteProveedorCliente.vb</DependentUpon>
     </Compile>
@@ -445,12 +439,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptCatalogoUsuarios.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reportes\rptComanda.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptComanda.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\RptComprasProveedores.vb">
@@ -608,9 +596,6 @@
     <EmbeddedResource Include="FrmReporteVentas.resx">
       <DependentUpon>FrmReporteVentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRptComanda.resx">
-      <DependentUpon>FrmRptComanda.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSeleccionReporteProveedorCliente.resx">
       <DependentUpon>FrmSeleccionReporteProveedorCliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -646,10 +631,6 @@
     <EmbeddedResource Include="Reportes\rptCatalogoUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCatalogoUsuarios.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\rptComanda.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptComanda.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptComprasProveedores.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

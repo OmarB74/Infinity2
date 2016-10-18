@@ -48,7 +48,6 @@ Partial Class FrmReimpresionComanda
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.CachedPageNumberPerDoc = 10
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(4, 90)
         Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
@@ -78,7 +77,7 @@ Partial Class FrmReimpresionComanda
         '
         Me.txtFolioComanda.Location = New System.Drawing.Point(15, 29)
         Me.txtFolioComanda.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtFolioComanda.MaxLength = 15
+        Me.txtFolioComanda.MaxLength = 17
         Me.txtFolioComanda.Name = "txtFolioComanda"
         Me.txtFolioComanda.Size = New System.Drawing.Size(312, 26)
         Me.txtFolioComanda.TabIndex = 0
